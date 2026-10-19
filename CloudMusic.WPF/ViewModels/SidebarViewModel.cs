@@ -20,6 +20,9 @@ namespace CloudMusic.WPF.ViewModels
             {
                 switch (SelectedSidebarItem.Type)
                 {
+                    case SidebarItemType.Discover:
+                        NavigationService.NavigateTo(new DiscoverViewModel());
+                        break;
                     case SidebarItemType.Featured:
                         NavigationService.NavigateTo(new FeaturedViewModel());
                         break;
@@ -35,6 +38,7 @@ namespace CloudMusic.WPF.ViewModels
             NavigationService = navigation;
             SidebarItems =
             [
+                new() { Title = "推荐", Icon = "pack://application:,,,/Assets/Icons/Navigation/featured.svg", Type = SidebarItemType.Discover },
                 new() { Title = "精选", Icon = "pack://application:,,,/Assets/Icons/Navigation/featured.svg", Type = SidebarItemType.Featured },
                 new() { Title = "播客", Icon = "pack://application:,,,/Assets/Icons/Navigation/podcast.svg", Type = SidebarItemType.Podcast },
                 new() { Title = "关注", Icon = "pack://application:,,,/Assets/Icons/Navigation/following.svg", Type = SidebarItemType.Following },

@@ -6,6 +6,7 @@ namespace CloudMusic.WPF.Models
 {
     public enum SidebarItemType
     {
+        Discover,
         Featured,
         Podcast,
         Following,

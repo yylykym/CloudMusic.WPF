@@ -17,19 +17,30 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Border
-            Grid.Column="0"
-            Margin="0,0,8,0"
-            Padding="8,12"
-            Background="Transparent"
-            BorderBrush="#E2E5E9"
-            BorderThickness="0.8"
-            CornerRadius="8">
-            <svgc:SvgIcon
-                Width="12"
-                Height="12"
-                UriSource="/Assets/Icons/Topbar/back.svg" />
+
+
+           <Border
+                Margin="0,0,8,0"
+                Background="Transparent"
+                BorderBrush="#E2E5E9"
+                BorderThickness="0.8"
+                CornerRadius="8">
+            <Button 
+                Padding="8,12"
+                Grid.Column="0"
+                Cursor="Hand"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="Transparent"
+                 BorderThickness="0">
+                <svgc:SvgIcon
+                    Width="12"
+                    Height="12"
+                    UriSource="/Assets/Icons/Topbar/back.svg" />
+            </Button>
+
         </Border>
+
 
         <StackPanel Grid.Column="1" Orientation="Horizontal">
             <Border
@@ -49,9 +60,7 @@
                                 </LinearGradientBrush>
                             </Setter.Value>
                         </Setter>
-
                         <Style.Triggers>
-
                             <DataTrigger Binding="{Binding IsKeyboardFocused, ElementName=InputTextBox}" Value="True">
                                 <Setter Property="Background" Value="#F7F9FC" />
                             </DataTrigger>
@@ -100,6 +109,39 @@
             VerticalAlignment="Center"
             Orientation="Horizontal">
             <!--  账号、功能按钮、最小化、最大化、关闭  -->
+                <Button
+                    Cursor="Hand"
+                    Margin="0,0,16,0"
+                    BorderThickness="0"
+                    Background="Transparent" >
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                    <Border CornerRadius="16"
+                             Background="White"
+                             BorderBrush="#E2E5E9"
+                             Margin="0,0,4,0"
+                             Width="32"
+                             Height="32"
+                             BorderThickness="0.8">
+                        <svgc:SvgIcon
+                             Grid.Column="0"
+                             Width="12"
+                             Height="12"
+                             Fill="#F9DADB"
+                             UriSource="/Assets/Icons/Topbar/default_avatar.svg" />
+                    </Border>
+                    <TextBlock 
+                            Grid.Column="1"
+                            Text="Cute晨"
+                            FontSize="12"
+                            Foreground="Gray"
+                            VerticalAlignment="Center"
+                            Margin="0,0,16,0"/>
+                    </Grid>
+                </Button>
             <svgc:SvgIcon
                 Width="12"
                 Height="12"
@@ -114,6 +156,7 @@
                 Width="12"
                 Height="12"
                 UriSource="/Assets/Icons/Topbar/close.svg" />
+            
         </StackPanel>
     </Grid>
 </UserControl>
