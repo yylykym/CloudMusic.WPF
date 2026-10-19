@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Assets\Brand\logo.svg" />
+    <None Remove="Assets\Icons\Navigation\featured.svg" />
+    <None Remove="Assets\Icons\Navigation\following.svg" />
+    <None Remove="Assets\Icons\Navigation\recentlyplayed.svg" />
+    <None Remove="Assets\Icons\Topbar\back.svg" />
+    <None Remove="Assets\Icons\Topbar\close.svg" />
+    <None Remove="Assets\Icons\Topbar\maximize.svg" />
+    <None Remove="Assets\Icons\Topbar\minimize.svg" />
+    <None Remove="Assets\Icons\Topbar\search.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Navigation\favorites.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Icons\Navigation\featured.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+    <PackageReference Include="SharpVectors.Wpf" Version="1.8.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Assets\Brand\logo.svg" />
+    <Resource Include="Assets\Icons\Navigation\following.svg" />
+    <Resource Include="Assets\Icons\Navigation\recentlyplayed.svg" />
+    <Resource Include="Assets\Icons\Navigation\downloads.svg" />
+    <Resource Include="Assets\Icons\Navigation\localmusic.svg" />
+    <Resource Include="Assets\Icons\Navigation\podcast.svg" />
+    <Resource Include="Assets\Icons\Topbar\back.svg" />
+    <Resource Include="Assets\Icons\Topbar\close.svg" />
+    <Resource Include="Assets\Icons\Topbar\maximize.svg" />
+    <Resource Include="Assets\Icons\Topbar\minimize.svg" />
+    <Resource Include="Assets\Icons\Topbar\search.svg" />
+  </ItemGroup>
+
+</Project>
