@@ -22,5 +22,12 @@ namespace CloudMusic.WPF.Views
         {
             InitializeComponent();
         }
+        private void Card_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            if (e.WidthChanged && e.NewSize.Width > 0)
+            {
+                Height = e.NewSize.Width / 0.75;
+            }
+        }
     }
 }
